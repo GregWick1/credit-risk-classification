@@ -1,2 +1,28 @@
-# Module 20 Credit Risk Report
+Module 20 Credit Risk Report
 
+ Overview of the Analysis
+
+  * Purpose: The goal of the analysis is to determine if a logistic regression model can more accuractely predict healthy loans vs high risk loans
+
+  * Dataset: The dataset used to perform the analysis consists of information on 77,536 loans. The data includes columns for  loan_size, interest_rate, borrower_income, debt_to_income ratio, number_of_accounts, derotatory_marks, total_debt, and loan_status. The category that we are attempting to predict with our analysis is loan_status. The data provided in the remaining columns will be used as features to train the data and inform the predictions.
+
+  * Machine Learning Methods Utilized: 
+
+    * LogisticRegression from sklearn
+
+    * TrainTestSplit from sklearn
+
+    * Confusion Matrix, Classification Report from sklearn
+
+  Results
+
+    * Machine Learning Logistic Regression Model
+
+      * Accuracy score: 0.99
+      * Precision: Class 0: 1.00 Class 1: 0.85
+      * Recall: Class 0: 0.99 Class 1: 0.91
+
+  Summary 
+
+    The model performed almost perfectly for healthy loans (Class 0) and performed relatively well for risky loans (Class 1). High risk loans had a lower precision than recall which means that it is giving false positives at a higher rate than false negatives.
+    I would reccommend that the model be used to evaluate other loans after being used on more datasets to get ensure its scores were not due to this particular dataset
